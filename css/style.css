@@ -41,3 +41,14 @@ main {
     background-color: #1873bd;
     color: white;
   }
+
+  .graph{
+    height: 400px;
+    background: rgba(0,0,0,.03);
+    border: 3px solid black;
+  }
+
+  .heatmap {
+    width: 100%;
+    height: 100%;
+}
