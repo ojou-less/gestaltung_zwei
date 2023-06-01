@@ -10,17 +10,17 @@
     <body>
         <header>
             <div class="topnav">
-                <a class="active" href="index.html">Home</a>
-                <a href="luftqualitaet.html">Luftqualität</a>
-                <a href="lebensqualitaet.html">Lebensqualität</a>
-                <a href="zusammenhaenge.html">Zusammenhänge</a>
-                <a href="about.html">About</a>
+                <a class="active" id="home" onclick="changeRefrence(this)">Home</a>
+                <a id="air" onclick="changeRefrence(this)">Luftqualität</a>
+                <a id="life" onclick="changeRefrence(this)">Lebensqualität</a>
+                <a id="connection" onclick="changeRefrence(this)">Zusammenhänge</a>
+                <a id="about" onclick="changeRefrence(this)">About</a>
             </div>
         </header>
         </div>
         <main>
             <!--everything about data reprasentation is in her-->
-            <h1>index</h1>
+            <h1 id="refrence">Home</h1>
             <div class="data">
                 <!-- Graph-->
                 <div class="graph">
