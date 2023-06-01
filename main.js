@@ -7,7 +7,6 @@ function changeRefrence(callingElement)
 
   currentRefrence[0].classList.remove("active")
   newRefrence.classList.add("active");
-
 }
 
 
