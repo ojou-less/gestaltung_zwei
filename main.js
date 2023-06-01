@@ -10,6 +10,14 @@ function changeRefrence(callingElement)
 
 }
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("sliderOutput");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 
 // minimal heatmap instance configuration
 var heatmapInstance = h337.create({
@@ -38,11 +46,13 @@ var heatmapInstance = h337.create({
     max = Math.max(max, val);
     var point = {
       x: Math.floor(Math.random()*width),
-      y: Math.floor(Math.random()*height),
+      // y: Math.floor(Math.random()*height),
+      y: slider.value,
       value: val
     };
     points.push(point);
   }
+  
   // heatmap data format
   var data = {
     max: max,
