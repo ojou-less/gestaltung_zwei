@@ -48,15 +48,15 @@ h1 {
 }
 .data {
   display: flex;
-  justify-content: space-between;
 }
 
 .graph {
-  width: 840px;
-  height: 400px;
+  flex-grow: 3;
+}
+.heatmap {
+  height: 450px;
 }
 
 .legende {
-  width: 200px;
-  height: 400px;
+  flex-grow: 1;
 }
