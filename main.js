@@ -4,6 +4,15 @@ var heatmapInstance = h337.create({
     container: document.querySelector('.heatmap')
   });
   
+  var demoWrapper = document.querySelector('.data');
+  var tooltip = document.querySelector('.tooltip');
+  function updateTooltip(x, y, value) {
+    // + 15 for distance to cursor
+    var transl = 'translate(' + (x + 15) + 'px, ' + (y + 15) + 'px)';
+    tooltip.style.webkitTransform = transl;
+    tooltip.innerHTML = value;
+  };
+
   // now generate some random data
   var points = [];
   var max = 0;
