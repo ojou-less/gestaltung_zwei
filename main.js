@@ -10,6 +10,14 @@ function changeRefrence(callingElement)
 
 }
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("sliderOutput");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 
 // minimal heatmap instance configuration
 var heatmapInstance = h337.create({
@@ -17,6 +25,15 @@ var heatmapInstance = h337.create({
     container: document.querySelector('.heatmap')
   });
   
+  var demoWrapper = document.querySelector('.data');
+  var tooltip = document.querySelector('.tooltip');
+  function updateTooltip(x, y, value) {
+    // + 15 for distance to cursor
+    var transl = 'translate(' + (x + 15) + 'px, ' + (y + 15) + 'px)';
+    tooltip.style.webkitTransform = transl;
+    tooltip.innerHTML = value;
+  };
+
   // now generate some random data
   var points = [];
   var max = 0;
@@ -29,11 +46,13 @@ var heatmapInstance = h337.create({
     max = Math.max(max, val);
     var point = {
       x: Math.floor(Math.random()*width),
-      y: Math.floor(Math.random()*height),
+      // y: Math.floor(Math.random()*height),
+      y: slider.value,
       value: val
     };
     points.push(point);
   }
+  
   // heatmap data format
   var data = {
     max: max,
