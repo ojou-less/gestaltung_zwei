@@ -1,3 +1,16 @@
+function changeRefrence(callingElement)
+{
+  let CallingElementId = callingElement.id;
+  let currentRefrence = document.getElementsByClassName("active");
+  let newRefrence = document.getElementById(CallingElementId);
+  document.getElementById("refrence").innerHTML=newRefrence.innerHTML;
+
+  currentRefrence[0].classList.remove("active")
+  newRefrence.classList.add("active");
+
+}
+
+
 // minimal heatmap instance configuration
 var heatmapInstance = h337.create({
     // only container is required, the rest will be defaults
