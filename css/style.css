@@ -92,3 +92,12 @@ h1 {
   background: #1873bd;
   cursor: pointer;
 }
+
+.tooltip {
+  display: none;
+}
+
+.tooltip:hover {
+  display: block!important;
+  background: #afccd9!important;
+}
