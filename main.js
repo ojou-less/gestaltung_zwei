@@ -54,7 +54,7 @@ function updateLegend(data) {
 var heatmapInstance = h337.create({
     // only container is required, the rest will be defaults
     container: document.querySelector('.heatmap'),
-    backgroundColor: "rgba(24,115,189,.95)",
+    backgroundColor: "rgba(175, 204, 217, .95)",
     gradient: {
       ".4": "turquoise",
       ".8": "green",
@@ -64,7 +64,7 @@ var heatmapInstance = h337.create({
     minOpacity: .3
   });
   
-  var demoWrapper = document.querySelector('.data');
+  var heatmapWrapper = document.querySelector('.data');
   var tooltip = document.querySelector('.tooltip');
   function updateTooltip(x, y, value) {
     // + 15 for distance to cursor
@@ -72,7 +72,7 @@ var heatmapInstance = h337.create({
     tooltip.style.webkitTransform = transl;
     tooltip.innerHTML = value;
   };
-  demoWrapper.onmousemove = function(ev) {
+  heatmapWrapper.onmousemove = function(ev) {
     var x = ev.layerX;
     var y = ev.layerY;
     // getValueAt gives us the value for a point p(x/y)
@@ -82,6 +82,10 @@ var heatmapInstance = h337.create({
     });
     tooltip.style.display = 'block';
     updateTooltip(x, y, value);
+  };
+
+  heatmapWrapper.onmouseout = function() {
+    tooltip.style.display = 'none';
   };
 
   // now generate some random data

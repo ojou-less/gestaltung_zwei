@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color: whitesmoke;
+    background-color: #afccd9;
 }
 
 header {
@@ -9,10 +9,10 @@ header {
 
 .boxed {
   margin: 8px;
-  background-color: white;
-  -webkit-box-shadow: 1px 1px 15px -5px #000000; 
+  background-color: #afccd9;
+  /*-webkit-box-shadow: 1px 1px 15px -5px #000000; 
   box-shadow: 1px 1px 15px -5px #000000;
-  border-radius: 8px;
+  border-radius: 8px;*/
 }
 
 h1 {
