@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <title>Treibhausgase Heatmap</title>
+        <title>Ich bin eine Testseite</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="assests/heatmap.js"></script>
-        <script src="assests/heatmap.min.js"></script>
+        <link rel="stylesheet" href="css/teststyle.css">
+        <script src="https://d3js.org/d3.v6.js"></script>
     </head>
     <body>
         <header>
@@ -15,25 +14,12 @@
                 <a id="life" onclick="changeRefrence(this)">Lebensqualität</a>
                 <a id="connection" onclick="changeRefrence(this)">Zusammenhänge</a>
                 <!-- <a id="about" onclick="changeRefrence(this)">About</a> -->
-                <a id="about" href="test.html" onclick="changeRefrence(this)">About</a>
+                <a id="about" href="test.html">About</a>
             </div>
         </header>
-        </div>
         <main>
-            <!--everything about data reprasentation is in her-->
             <h1 class="boxed" id="refrence">Home</h1>
-            <div class="data boxed">
-                <!-- Graph-->
-                <div class="graph boxed" style="align-items: center;">
-                    <div class="heatmap boxed" style="position: relative;">
-                        <label class="tooltip boxed" style="position: absolute; z-index: 1000;"></label>
-                    </div>
-                </div>
-                <!-- legende-->
-                <!-- <div class="legende boxed">
-                    <canvas id="legendCanvas" width="100" height="10"></canvas>
-                </div> -->
-            </div>
+            <div id="my_dataviz"></div>
         </main>
         <footer>
             <!--Zeitstrahl-->
@@ -44,6 +30,6 @@
                   </div>
             </div>
         </footer>
-        <script src="main.js"></script>
+        <script src="test.js"></script>
     </body>
 </html>
