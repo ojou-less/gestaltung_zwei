@@ -9,17 +9,17 @@
     <body>
         <header>
             <div class="topnav">
-                <a class="active" id="home" onclick="changeRefrence(this)">Home</a>
+                <a id="home" onclick="changeRefrence(this)">Home</a>
                 <a id="air" onclick="changeRefrence(this)">Luftqualität</a>
                 <a id="life" onclick="changeRefrence(this)">Lebensqualität</a>
                 <a id="connection" onclick="changeRefrence(this)">Zusammenhänge</a>
                 <!-- <a id="about" onclick="changeRefrence(this)">About</a> -->
-                <a id="about" href="test.html">About</a>
+                <a class="active" id="about" href="test.html">About</a>
             </div>
         </header>
         <main>
             <h1 class="boxed" id="refrence">Home</h1>
-            <div id="my_dataviz"></div>
+            <div id="my_dataviz" style="align-items: center;"></div>
         </main>
         <footer>
             <!--Zeitstrahl-->

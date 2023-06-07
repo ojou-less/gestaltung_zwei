@@ -1,4 +1,15 @@
 //testscript
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("sliderOutput");
+output.innerHTML = slider.value; //display default slider val
+
+//update current slider val
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    ySliderValue = this.value;
+  }
+
 // set the dimensions and margins of the graph
 const margin = {top: 10, right: 30, bottom: 30, left: 40},
     width = 460 - margin.left - margin.right,
@@ -13,7 +24,7 @@ const svg = d3.select("#my_dataviz")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // read data
-d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_for_density2d.csv").then( function(data) {
+d3.csv("test-vals.csv").then( function(data) {
 
   // Add X axis
   const x = d3.scaleLinear()
