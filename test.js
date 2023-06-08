@@ -62,3 +62,15 @@ d3.csv("test-vals.csv").then( function(data) {
       .attr("d", d3.geoPath())
       .attr("fill", function(d) { return color(d.value); })
 })
+
+async function getApiData() {
+    let response = await fetch("https://www.umweltbundesamt.de/api/air_data/v2/meta/json?use=airquality&date_from=2021-12-31&date_to=2022-01-01/");
+    let data = await response. json ()
+    return data;
+    }
+
+const fs = require('fs')
+
+fs.writeFile("data.json", getApiData(), (err) =>{
+    if (err) throw err;
+});
