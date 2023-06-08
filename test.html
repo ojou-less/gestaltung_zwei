@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ich bin eine Testseite</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/teststyle.css">
+        <script src="https://d3js.org/d3.v6.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <a id="home" href="index.html" onclick="changeRefrence(this)">Home</a>
+                <a id="air" onclick="changeRefrence(this)">Luftqualität</a>
+                <a id="life" onclick="changeRefrence(this)">Lebensqualität</a>
+                <a id="connection" onclick="changeRefrence(this)">Zusammenhänge</a>
+                <!-- <a id="about" onclick="changeRefrence(this)">About</a> -->
+                <a class="active" id="about" href="test.html" onclick="changeRefrence(this)">About</a>
+            </div>
+        </header>
+        <main>
+            <h1 class="boxed" id="refrence">Testseite</h1>
+            <div id="my_dataviz" style="align-items: center;"></div>
+        </main>
+        <footer>
+            <!--Zeitstrahl-->
+            <div class="zeitstrahl boxed">
+                <div class="slidecontainer">
+                    <input type="range" min="2000" max="2030" value="2023" class="slider" id="myRange">
+                    <output id="sliderOutput" name="outputFromSlider" for="myRange"></output>
+                  </div>
+            </div>
+        </footer>
+        <script src="test.js"></script>
+    </body>
+</html>
