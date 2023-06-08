@@ -64,8 +64,8 @@ d3.csv("test-vals.csv").then( function(data) {
 })
 
 async function getApiData() {
-    let response = await fetch("https://www.umweltbundesamt.de/api/air_data/v2/meta/json?use=airquality&date_from=2021-12-31&date_to=2022-01-01/");
-    let data = await response. json ()
+    let response = await fetch("https://www.umweltbundesamt.de/api/air_data/v2/airquality/json?use=airquality&date_from=2019-01-01&date_to=2019-01-01&lang=de/");
+    let data = await response.json()
     return data;
     }
 
